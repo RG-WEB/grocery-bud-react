@@ -16,14 +16,14 @@ const App = () => {
     const newItem = { id: nanoid(), name: item, completed: false };
     const newItems = [...items, newItem];
     setItems(newItems);
-    toast.success("Vous avez ajouter un élément ");
+    toast.success("Vous avez ajouté un élément ");
     setLocalStorage(newItems);
   };
 
   const removeItem = (id) => {
     const filteredItem = items.filter((item) => item.id !== id);
     setItems(filteredItem);
-    toast.error("Vous avez supprimer un element");
+    toast.error("Vous avez supprimé un element");
     setLocalStorage(filteredItem);
   };
 
